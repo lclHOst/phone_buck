@@ -1,16 +1,21 @@
-contacts = []
+while(True):
+    response = input('(1)add contact (2)print contacts (3)exit: ')
+    if response == '1':
+        person_name = input('Name: ')
+        person_surname = input('Surname: ')
+        person_phone = input('Phone: ')
+        person_email = input('Email: ')
 
-person_name = input('Name: ')
-person_surname = input('Surname: ')
-person_phone = input('Phone: ')
-person_email = input('Email: ')
+        person_contact = {
+            'name': person_name,
+            'surname': person_surname,
+            'phone': person_phone,
+            'email': person_email
+        }
 
-person_contact = {
-    'Name': person_name,
-    'Surname': person_surname,
-    'Phone': person_phone,
-    'Email': person_email
-}
-
-contacts.append(person_contact)
-print(contacts)
+        contacts.append(person_contact)
+    elif response == '2':
+        print(contacts)
+    elif response == '3':
+        print('Bye bye!')
+        exit()
